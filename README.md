@@ -1,0 +1,218 @@
+# T&C Decoder
+
+> Never miss the fine print again. AI-powered Terms & Conditions analyzer that runs entirely in your browser.
+
+![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?logo=google-chrome)
+![Privacy First](https://img.shields.io/badge/Privacy-100%25%20Local-green)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+
+## 📖 Overview
+
+T&C Decoder is a Chrome extension that helps you understand Terms & Conditions, Privacy Policies, and other legal documents without reading pages of legalese. Using **local AI processing**, it highlights critical clauses and generates plain-English summaries—all without sending your data to external servers.
+
+## ✨ Features
+
+### 🎯 Smart Detection
+- **Automatic keyword detection** for risky terms:
+  - 💰 Fees & charges
+  - 🔄 Cancellation policies
+  - ♻️ Auto-renewal clauses
+- **Full sentence highlighting** for better context
+- **Risk severity scoring** (Low, Medium, High)
+
+### 🤖 AI-Powered Summaries
+- **100% local processing** - Your data never leaves your device
+- **Plain-English explanations** of complex legal terms
+- **Top 5 key points** extraction for quick understanding
+- Powered by [Transformers.js](https://huggingface.co/docs/transformers.js) and DistilBART
+
+### 📅 Subscription Management
+- **One-click calendar reminders** for cancellation deadlines
+- Pre-filled Google Calendar events set 30 days out
+- Never forget to cancel before auto-renewal
+
+### 🎨 Modern UI
+- Clean, modern interface with custom color palette
+- Side panel integration for seamless browsing
+- Mobile-responsive design
+
+## 🎬 Demo
+
+<!-- Add your demo GIF here -->
+![Demo GIF](./demo.gif)
+
+## 🚀 Installation
+
+### From Source
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/tc-decoder.git
+   cd tc-decoder
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Build the extension**
+   ```bash
+   npm run build
+   ```
+
+4. **Load in Chrome**
+   - Open Chrome and navigate to `chrome://extensions/`
+   - Enable "Developer mode" (toggle in top right)
+   - Click "Load unpacked"
+   - Select the `dist` folder from the project directory
+
+## 💻 Usage
+
+1. **Open the extension** - Click the T&C Decoder icon in your Chrome toolbar
+2. **Navigate to any Terms & Conditions page**
+3. **Click "Analyze This Page"** in the side panel
+4. **Review the results:**
+   - **Risk Overview**: Overall severity and key warnings
+   - **AI Summary**: Top 5 important points in plain English
+   - **Page Highlights**: Risky clauses highlighted in yellow
+5. **Set a reminder** (optional) - Click the calendar button to add a cancellation reminder
+
+## 🏗️ How It Works
+
+### Architecture
+
+```
+┌─────────────┐
+│   Website   │ ← User browses T&C page
+└──────┬──────┘
+       │
+┌──────▼──────────┐
+│ Content Script  │ ← Extracts text using Mozilla Readability
+└──────┬──────────┘
+       │
+┌──────▼──────────┐
+│ Service Worker  │ ← Orchestrates analysis flow
+└─────┬─────┬─────┘
+      │     │
+      │     └─────────────┐
+      │                   │
+┌─────▼──────┐    ┌──────▼─────────┐
+│ Rules Engine│    │ AI Summarizer │
+│             │    │ (Offscreen)   │
+│ • Regex     │    │               │
+│ • Keyword   │    │ • DistilBART  │
+│ • Scoring   │    │ • Local ONNX  │
+└─────┬──────┘    └──────┬─────────┘
+      │                   │
+      └─────────┬─────────┘
+                │
+        ┌───────▼────────┐
+        │   Side Panel   │ ← Displays results to user
+        │   (React UI)   │
+        └────────────────┘
+```
+
+### Key Technologies
+
+- **Manifest V3** - Latest Chrome extension standard
+- **React + Chakra UI** - Modern frontend framework
+- **Transformers.js** - Browser-based ML inference
+- **ONNX Runtime** - Optimized model execution
+- **Mozilla Readability** - Clean text extraction
+- **TypeScript** - Type-safe development
+
+### Privacy & Security
+
+🔒 **All processing happens locally on your device:**
+- No data sent to external servers
+- No tracking or analytics
+- No account required
+- Open source and auditable
+
+## 🛠️ Development
+
+### Prerequisites
+- Node.js 18+
+- npm or yarn
+
+### Development Build
+```bash
+npm run dev
+```
+
+### Production Build
+```bash
+npm run build
+```
+
+### Project Structure
+```
+tc-decoder/
+├── src/
+│   ├── App.tsx              # Side panel UI
+│   ├── content.ts           # Content script (highlighting)
+│   ├── service-worker.js    # Background orchestration
+│   ├── offscreen.ts         # AI model runner
+│   ├── rules.ts             # Risk detection engine
+│   └── types.ts             # TypeScript definitions
+├── public/
+│   ├── manifest.json        # Extension manifest
+│   ├── sidepanel.html       # Side panel entry
+│   └── offscreen.html       # Offscreen document entry
+└── dist/                    # Build output
+```
+
+## 🎨 Color Palette
+
+The extension uses a carefully selected color scheme:
+
+- **Primary Blue**: `#3D74B6` - Buttons, borders, accents
+- **Cream**: `#FBF5DE` - Background, subtle elements
+- **Peach**: `#EAC8A6` - Medium severity indicators
+- **Coral**: `#E67A7A` - High severity warnings
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 Detected Risks
+
+The extension currently detects and highlights:
+
+- **Fees & Charges** - Hidden costs, billing terms
+- **Cancellation** - How to cancel, restrictions
+- **Auto-Renewal** - Automatic subscription renewals
+- **Data Sharing** - Third-party data sharing practices
+
+## 🐛 Known Limitations
+
+- **First run delay**: AI model downloads on first use (~200MB, takes 1-2 minutes)
+- **Summary quality**: Small browser-based models have limitations compared to cloud AI
+- **Language support**: Currently English only
+- **Max highlights**: Limited to 50 highlights per page for performance
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Transformers.js](https://github.com/xenova/transformers.js) by Xenova
+- [Mozilla Readability](https://github.com/mozilla/readability)
+- [Chakra UI](https://chakra-ui.com/) for the component library
+- [DistilBART](https://huggingface.co/Xenova/distilbart-cnn-6-6) model by Hugging Face
+
+## 📬 Contact
+
+Have questions or feedback? Open an issue on GitHub!
+
+---
+
+<p align="center">Made with ❤️ for consumers who value their privacy and time</p>
