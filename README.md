@@ -10,7 +10,7 @@
 
 T&C Decoder is a Chrome extension that helps you understand Terms & Conditions, Privacy Policies, and other legal documents without reading pages of legalese. Using **local AI processing**, it highlights critical clauses and generates plain-English summaries—all without sending your data to external servers.
 
-## ✨ Features
+## Features
 
 ### 🎯 Smart Detection
 - **Automatic keyword detection** for risky terms:
@@ -31,10 +31,6 @@ T&C Decoder is a Chrome extension that helps you understand Terms & Conditions, 
 - Pre-filled Google Calendar events set 30 days out
 - Never forget to cancel before auto-renewal
 
-### 🎨 Modern UI
-- Clean, modern interface with custom color palette
-- Side panel integration for seamless browsing
-- Mobile-responsive design
 
 ## 🎬 Demo
 
@@ -78,7 +74,7 @@ T&C Decoder is a Chrome extension that helps you understand Terms & Conditions, 
    - **Page Highlights**: Risky clauses highlighted in yellow
 5. **Set a reminder** (optional) - Click the calendar button to add a cancellation reminder
 
-## 🏗️ How It Works
+## How It Works
 
 ### Architecture
 
@@ -122,14 +118,6 @@ T&C Decoder is a Chrome extension that helps you understand Terms & Conditions, 
 - **Mozilla Readability** - Clean text extraction
 - **TypeScript** - Type-safe development
 
-### Privacy & Security
-
-🔒 **All processing happens locally on your device:**
-- No data sent to external servers
-- No tracking or analytics
-- No account required
-- Open source and auditable
-
 ## 🛠️ Development
 
 ### Prerequisites
@@ -163,55 +151,18 @@ tc-decoder/
 └── dist/                    # Build output
 ```
 
-## 🎨 Color Palette
 
-The extension uses a carefully selected color scheme:
-
-- **Primary Blue**: `#3D74B6` - Buttons, borders, accents
-- **Cream**: `#FBF5DE` - Background, subtle elements
-- **Peach**: `#EAC8A6` - Medium severity indicators
-- **Coral**: `#E67A7A` - High severity warnings
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 Detected Risks
-
-The extension currently detects and highlights:
-
-- **Fees & Charges** - Hidden costs, billing terms
-- **Cancellation** - How to cancel, restrictions
-- **Auto-Renewal** - Automatic subscription renewals
-- **Data Sharing** - Third-party data sharing practices
-
-## 🐛 Known Limitations
-
-- **First run delay**: AI model downloads on first use (~200MB, takes 1-2 minutes)
-- **Summary quality**: Small browser-based models have limitations compared to cloud AI
-- **Language support**: Currently English only
-- **Max highlights**: Limited to 50 highlights per page for performance
-
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Transformers.js](https://github.com/xenova/transformers.js) by Xenova
 - [Mozilla Readability](https://github.com/mozilla/readability)
 - [Chakra UI](https://chakra-ui.com/) for the component library
 - [DistilBART](https://huggingface.co/Xenova/distilbart-cnn-6-6) model by Hugging Face
 
-## 📬 Contact
-
-Have questions or feedback? Open an issue on GitHub!
 
 ---
 
