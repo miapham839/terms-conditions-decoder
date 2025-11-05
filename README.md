@@ -25,7 +25,7 @@ T&C Decoder is a Chrome extension that helps you understand Terms & Conditions, 
 ### 📅 Subscription Management
 - **One-click calendar reminders** for cancellation deadlines
 - Pre-filled Google Calendar events set 30 days out
-- Never forget to cancel before auto-renewal
+- Never forget to cancel before auto-renewal again!
 
 ## 🎬 Demo
 
