@@ -12,12 +12,12 @@ T&C Decoder is a Chrome extension that helps you understand Terms & Conditions, 
 ### 🎯 Smart Detection
 - **Automatic keyword detection** for risky terms:
   - Fees & charges
-  - Cancellation policies
-  - Auto-renewal clauses
+  - Cancellation and auto-renewal policies
+  - Data Sharing and Privacy risks
 - **Risk severity scoring** (Low, Medium, High)
 
 ### 🤖 AI-Powered Summaries
-- **100% local processing** - Your data never leaves your device
+- **100% local processing** - No external APIs, your data never leaves your device
 - **Plain-English explanations** of complex legal terms
 - **Top 5 key points** extraction for quick understanding
 - Powered by [Transformers.js](https://huggingface.co/docs/transformers.js) and DistilBART
