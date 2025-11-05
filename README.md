@@ -2,9 +2,6 @@
 
 > Never miss the fine print again. AI-powered Terms & Conditions analyzer that runs entirely in your browser.
 
-![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue?logo=google-chrome)
-![Privacy First](https://img.shields.io/badge/Privacy-100%25%20Local-green)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## 📖 Overview
 
@@ -14,10 +11,9 @@ T&C Decoder is a Chrome extension that helps you understand Terms & Conditions, 
 
 ### 🎯 Smart Detection
 - **Automatic keyword detection** for risky terms:
-  - 💰 Fees & charges
-  - 🔄 Cancellation policies
-  - ♻️ Auto-renewal clauses
-- **Full sentence highlighting** for better context
+  - Fees & charges
+  - Cancellation policies
+  - Auto-renewal clauses
 - **Risk severity scoring** (Low, Medium, High)
 
 ### 🤖 AI-Powered Summaries
@@ -30,7 +26,6 @@ T&C Decoder is a Chrome extension that helps you understand Terms & Conditions, 
 - **One-click calendar reminders** for cancellation deadlines
 - Pre-filled Google Calendar events set 30 days out
 - Never forget to cancel before auto-renewal
-
 
 ## 🎬 Demo
 
