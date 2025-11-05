@@ -29,8 +29,9 @@ T&C Decoder is a Chrome extension that helps you understand Terms & Conditions, 
 
 ## 🎬 Demo
 
-<!-- Add your demo GIF here -->
-![Demo GIF](./demo.gif)
+<p align="center">
+  <img src="./demo.gif" alt="Demo GIF" width="800"/>
+</p>
 
 ## 🚀 Installation
 
